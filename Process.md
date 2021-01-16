@@ -43,3 +43,7 @@ NoMethodError (undefined method `balance' for #<Oystercard:0x00007f7eef1b8c88>)
 ## Step 6
 
 1. Feature test for max balance saved to issues.
+2. Unit test to raise error when max balance exceeded.
+3. Code written
+
+## Step 6
