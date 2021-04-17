@@ -46,4 +46,32 @@ NoMethodError (undefined method `balance' for #<Oystercard:0x00007f7eef1b8c88>)
 2. Unit test to raise error when max balance exceeded.
 3. Code written
 
-## Step 6
+## Step 7
+
+1. Feature test for deducting money.
+2. Unit test to allow deduct method to reduce balance.
+3. Code written
+
+## Step 8
+
+1. Feature test for touch_in, touch_out and in_journey?
+2. Unit tests for all three methods to influence the in_journey? status (between true and false)
+3. Code written
+
+## Step 9
+
+1. Feature test to check min balance on touch in
+2. Unit tests to raise error if insufficient balance on touch_in
+3. Code written
+
+## Step 10
+
+1. Feature test to charge on touch_out
+2. Unit tests to change balance on touch_out
+3. Code written
+
+## Step 11
+
+1. Feature test to charge on touch_out
+2. Unit tests to change balance on touch_out
+3. Code written
