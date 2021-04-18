@@ -57,8 +57,6 @@ I need to have the correct fare calculated
 
 ## How to use the app
 
-To try out the project:
-
 Clone the current repository
 
 ```
