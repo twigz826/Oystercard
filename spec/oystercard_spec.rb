@@ -25,24 +25,7 @@ describe Oystercard do
     end
   end
 
-  describe '#in_journey?' do
-    it 'is initially not in a journey' do
-      expect(card.in_journey?).to be false
-    end
-  end
-
   describe '#touch_out' do
-    it "can touch out" do
-      toppedup_card.touch_in(entry_station)
-      toppedup_card.touch_out(exit_station)
-      expect(toppedup_card.in_journey?).to be false
-    end
-
-    it "stores the exit station" do
-      toppedup_card.touch_in(entry_station)
-      toppedup_card.touch_out(exit_station)
-      expect(toppedup_card.exit_station).to eq exit_station
-    end
 
     it "deducts the minimum fare on touch_out" do
       toppedup_card.touch_in(entry_station)
@@ -51,19 +34,11 @@ describe Oystercard do
   end
 
   describe '#touch_in' do
-    it "can touch in" do
-      toppedup_card.touch_in(entry_station)
-      expect(toppedup_card.in_journey?).to be true
-    end
 
     it "throws an error if a card with insufficient balance touches in" do
       expect { card.touch_in(entry_station) }.to raise_error("Insufficient balance, balance must exceed #{Oystercard::MIN_FARE}")
     end
 
-    it 'stores the entry station' do
-      toppedup_card.touch_in(entry_station)
-      expect(toppedup_card.entry_station).to eq entry_station
-    end
   end
 
   describe '#journeys' do
@@ -71,11 +46,6 @@ describe Oystercard do
       expect(toppedup_card.journeys).to be_empty
     end
 
-    it "stores a journey in memory" do
-      toppedup_card.touch_in(entry_station)
-      toppedup_card.touch_out(exit_station)
-      expect(toppedup_card.journeys).to include journey
-    end
   end
 
 end
